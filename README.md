@@ -2,7 +2,9 @@
 
 Dashboard penjualan distributor NPURE dengan data langsung dari Google Sheets. Dibangun memakai HTML, CSS, dan JavaScript tanpa backend atau build step.
 
-Dashboard saat ini: https://amir-npure.ripplingbike3.chatgpt.site/
+Dashboard utama (GitHub Pages): https://raihanrizqifauzan.github.io/amir-npure-dashboard/
+
+Versi ChatGPT Sites sebelumnya: https://amir-npure.ripplingbike3.chatgpt.site/
 
 ## Menjalankan lokal
 
@@ -45,13 +47,19 @@ Filter dipertahankan ketika data diperbarui. Rentang tanggal yang masih mengguna
 - Repeat berarti toko membeli pada dua bulan kalender berurutan, bukan jumlah order. Analisis menggunakan pasangan bulan lengkap terakhir yang tersedia dalam filter.
 - Analisis follow-up dan cross-sell merupakan kandidat verifikasi, bukan forecast, profit, stok, atau bukti churn permanen.
 
-## Deployment
+## Deployment otomatis ke GitHub Pages
 
-Publish direktori `dist` pada hosting statis. Tidak ada perintah build yang diperlukan.
+Repository ini publik. GitHub Pages memakai sumber **GitHub Actions** melalui `.github/workflows/pages.yml`.
 
-**Repository GitHub ini tidak otomatis memperbarui URL ChatGPT Sites yang tercantum di atas.** Deployment GitHub ke hosting lain harus dikonfigurasi tersendiri. Jangan menganggap push ke repository sebagai publikasi ke Sites.
+- Perubahan pada `dist/**` atau file workflow yang masuk ke branch `master` memicu pemeriksaan sintaks JavaScript, upload folder `dist`, dan deployment otomatis.
+- Workflow juga dapat dijalankan manual dari tab **Actions → Deploy dashboard to GitHub Pages → Run workflow**.
+- Status dan log deployment tersedia di tab Actions. URL produksi tetap https://raihanrizqifauzan.github.io/amir-npure-dashboard/.
+- Perubahan README saja tidak memicu deployment karena tidak mengubah dashboard.
+- Perubahan data Google Sheets tidak membutuhkan commit atau deployment; browser mengambilnya langsung saat dibuka/refresh dan setiap lima menit ketika tab aktif.
 
-Untuk tim: gunakan branch fitur, pull request, dan review sebelum merge. Setelah koneksi hosting dipasang, branch produksi dapat diatur deploy otomatis. Atur akses anggota tim melalui pengaturan repository; jangan membagikan akun pribadi atau token.
+Untuk tim: gunakan branch fitur dan pull request sebelum merge ke `master`. Akses publik hanya memberi hak baca; hanya kolaborator yang memiliki izin tulis dapat mengubah kode. Atur anggota tim melalui pengaturan repository, bukan dengan membagikan akun pribadi atau token.
+
+Publikasi GitHub Pages ini terpisah dari URL ChatGPT Sites sebelumnya. Push ke GitHub tidak memperbarui versi ChatGPT Sites.
 
 ## Pemeriksaan sebelum perubahan diterbitkan
 
