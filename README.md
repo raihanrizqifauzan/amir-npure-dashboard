@@ -41,7 +41,7 @@ Filter dipertahankan ketika data diperbarui. Rentang tanggal yang masih mengguna
 - Identitas toko menggunakan distributor + nama toko setelah trim dan normalisasi kapitalisasi.
 - Toko aktif memiliki QTY dan metrik nilai positif.
 - Metrik nilai dapat dipilih: Value atau Value DPP.
-- Type dan Series ditampilkan dalam grafik vertikal 100% terpisah. Satu kolom untuk setiap distributor; segmen diurutkan terbesar di bawah. Persentase menggunakan total distributor dalam cakupan filter aktif.
+- Type dan Series ditampilkan dalam grafik vertikal 100% terpisah. Satu kolom untuk setiap distributor; semua kolom memakai urutan kategori yang sama berdasarkan total kontribusi data terfilter, terbesar di bawah. Persentase menggunakan total distributor dalam cakupan filter aktif.
 - Grafik 100% menggunakan nilai positif. Nilai negatif tetap masuk ringkasan dan rincian, dengan catatan pada grafik.
 - Label lengkap semua kategori tersedia di bawah tiap kolom. Persentase kecil mempertahankan hingga dua desimal; nilai positif di bawah 0,01% ditandai <0,01%.
 - Repeat berarti toko membeli pada dua bulan kalender berurutan, bukan jumlah order. Analisis menggunakan pasangan bulan lengkap terakhir yang tersedia dalam filter.
