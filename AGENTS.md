@@ -114,11 +114,11 @@ Sumber harus dapat dibaca tanpa login. Jangan menaruh token, password, service-a
 - Dua grafik terpisah, vertikal 100%.
 - Satu kolom untuk satu distributor.
 - Kolom distributor diurutkan dari total nilai terbesar ke terkecil.
-- Dalam **setiap** kolom, kategori diurutkan mandiri berdasarkan nilainya: terbesar di bawah, terkecil di atas.
+- Urutan kategori sama di seluruh kolom distributor. Acuan urutan adalah total nilai positif kategori pada seluruh data terfilter: terbesar di bawah, terkecil di atas; jika total sama gunakan urutan alfabet. Jangan mengurutkan segmen secara mandiri per distributor.
 - Warna kategori konsisten antar-distributor dalam render yang sama. Jangan memberi warna berdasarkan peringkat segmen per distributor.
 - Grafik komposisi memakai baris bernilai positif; negatif tetap masuk ringkasan/rincian dan perlu catatan bila ada.
 - Jangan membesarkan tinggi minimum segmen kecil karena akan mengubah representasi persentase.
-- Label di dalam segmen tampil bila ruang cukup. Nama dan persentase **seluruh kategori** wajib tetap terlihat di bawah masing-masing kolom, tanpa harus hover.
+- Label di dalam segmen tampil bila ruang cukup. Nama dan persentase **seluruh kategori** wajib tetap terlihat di bawah masing-masing kolom, tanpa harus hover. Daftar label mengikuti urutan bersama; kategori tanpa penjualan pada distributor tersebut ditampilkan 0%.
 - Persentase kecil mempertahankan hingga dua desimal; nilai positif <0,01% ditulis `<0,01%`.
 - Tooltip/detail saat hover, klik, atau fokus tetap tersedia. Pertahankan navigasi keyboard dan aksesibilitas.
 - Layar kecil dapat menggeser grafik secara horizontal.
@@ -180,7 +180,7 @@ Repo publik dapat dibaca/di-clone siapa pun, tetapi akses push tetap dibatasi. P
 - Perubahan tampilan: periksa desktop dan ponsel; label kecil tidak tumpang tindih/terpotong.
 - Perubahan filter/data: uji satu/multi distributor, periode, Value/DPP, reset, refresh, dan hasil kosong.
 - Perubahan perhitungan: gunakan fixture kecil dengan hasil manual yang diketahui, plus data sumber terkini bila tersedia.
-- Grafik: jumlah proporsi tiap distributor ~100% sebelum pembulatan; urutan turun per kolom; pembagi berbeda antar-distributor; semua nama dan persentase tetap dapat dibaca.
+- Grafik: jumlah proporsi tiap distributor ~100% sebelum pembulatan; urutan kategori bersama antar-kolom sesuai kontribusi global terfilter; pembagi berbeda antar-distributor; semua nama dan persentase tetap dapat dibaca.
 - Retensi: pasangan bulan lengkap, pilihan tidak berurutan, dan bulan parsial.
 - CSV: pastikan escaping dan isi sesuai filter/pencarian yang berlaku.
 - Validasi source sheet dan tanggal campuran jika pembaca data berubah.
